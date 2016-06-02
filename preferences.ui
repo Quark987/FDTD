@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Preferences</class>
+ <widget class="QDialog" name="Preferences">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>582</width>
+    <height>343</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>582</width>
+    <height>343</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>582</width>
+    <height>343</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QListWidget" name="Panel">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>171</width>
+     <height>301</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Size</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>PML</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Computation</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Save</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QStackedWidget" name="Settings">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>20</y>
+     <width>351</width>
+     <height>301</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="page_1">
+    <widget class="QTabWidget" name="Size">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>351</width>
+       <height>301</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="Size_constraints">
+      <attribute name="title">
+       <string>Size constraints</string>
+      </attribute>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>10</y>
+         <width>232</width>
+         <height>232</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QLabel" name="label_cellsx">
+            <property name="text">
+             <string>Cells x:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_cellsy">
+            <property name="text">
+             <string>Cells y:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_sizex">
+            <property name="text">
+             <string>Size x [m]:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_sizey">
+            <property name="text">
+             <string>Size y [m]:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_courant">
+            <property name="text">
+             <string>Courant number:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_time">
+            <property name="text">
+             <string>Time [ns]:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_timesteps">
+            <property name="text">
+             <string>Timesteps:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QSpinBox" name="cellsX">
+            <property name="locale">
+             <locale language="English" country="UnitedStates"/>
+            </property>
+            <property name="maximum">
+             <number>90000</number>
+            </property>
+            <property name="value">
+             <number>10</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="cellsY">
+            <property name="locale">
+             <locale language="English" country="UnitedStates"/>
+            </property>
+            <property name="maximum">
+             <number>90000</number>
+            </property>
+            <property name="value">
+             <number>10</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QDoubleSpinBox" name="sizeX">
+            <property name="locale">
+             <locale language="English" country="UnitedStates"/>
+            </property>
+            <property name="decimals">
+             <number>4</number>
+            </property>
+            <property name="maximum">
+             <double>1000.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QDoubleSpinBox" name="sizeY">
+            <property name="locale">
+             <locale language="English" country="UnitedStates"/>
+            </property>
+            <property name="decimals">
+             <number>4</number>
+            </property>
+            <property name="maximum">
+             <double>1000.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QDoubleSpinBox" name="courant">
+            <property name="locale">
+             <locale language="English" country="UnitedStates"/>
+            </property>
+            <property name="decimals">
+             <number>4</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QDoubleSpinBox" name="time">
+            <property name="locale">
+             <locale language="English" country="UnitedStates"/>
+            </property>
+            <property name="decimals">
+             <number>2</number>
+            </property>
+            <property name="minimum">
+             <double>0.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>99999.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="timesteps">
+            <property name="locale">
+             <locale language="English" country="UnitedStates"/>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>9999999</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_2">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="geometry">
+      <rect>
+       <x>-1</x>
+       <y>-1</y>
+       <width>351</width>
+       <height>311</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="PML">
+      <attribute name="title">
+       <string>PML</string>
+      </attribute>
+      <widget class="QPushButton" name="Auto">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>130</y>
+         <width>71</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="text">
+        <string>Auto</string>
+       </property>
+       <property name="autoDefault">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>65</y>
+         <width>188</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QLabel" name="label_PMLlayers">
+            <property name="text">
+             <string>PML layers:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_m">
+            <property name="text">
+             <string>m:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_sigmax">
+            <property name="text">
+             <string>σ x max:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_sigmay">
+            <property name="text">
+             <string>σ y max:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="QSpinBox" name="PMLlayers">
+            <property name="locale">
+             <locale language="English" country="UnitedStates"/>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QDoubleSpinBox" name="m">
+            <property name="locale">
+             <locale language="English" country="UnitedStates"/>
+            </property>
+            <property name="maximum">
+             <double>9999.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QDoubleSpinBox" name="sigmaxMax">
+            <property name="locale">
+             <locale language="English" country="UnitedStates"/>
+            </property>
+            <property name="maximum">
+             <double>9999.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QDoubleSpinBox" name="sigmayMax">
+            <property name="locale">
+             <locale language="English" country="UnitedStates"/>
+            </property>
+            <property name="maximum">
+             <double>9999.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page">
+    <widget class="QTabWidget" name="tabWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>-1</x>
+       <y>-1</y>
+       <width>351</width>
+       <height>301</height>
+      </rect>
+     </property>
+     <widget class="QWidget" name="Computation">
+      <attribute name="title">
+       <string>Computation</string>
+      </attribute>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>80</y>
+         <width>207</width>
+         <height>96</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <item>
+           <widget class="QLabel" name="label_sample_distance">
+            <property name="text">
+             <string>Sample distance:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="FieldFrame">
+            <property name="text">
+             <string>Draw n'th field:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_No_Of_Threads">
+            <property name="text">
+             <string>Number of threads:</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <widget class="QSpinBox" name="sampleDistance">
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>99999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="DrawNthField">
+            <property name="maximum">
+             <number>99999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="NoOfThreads">
+            <property name="minimum">
+             <number>2</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_3">
+    <widget class="QTabWidget" name="tabWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>-1</x>
+       <y>-1</y>
+       <width>351</width>
+       <height>301</height>
+      </rect>
+     </property>
+     <widget class="QWidget" name="Save">
+      <attribute name="title">
+       <string>Save</string>
+      </attribute>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>85</y>
+         <width>197</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_width">
+            <property name="text">
+             <string>Width:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_height">
+            <property name="text">
+             <string>Height:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QSpinBox" name="width">
+            <property name="maximum">
+             <number>9999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="height">
+            <property name="maximum">
+             <number>9999</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

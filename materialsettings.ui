@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MaterialSettings</class>
+ <widget class="QMainWindow" name="MaterialSettings">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>329</width>
+    <height>388</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>329</width>
+    <height>388</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>329</width>
+    <height>388</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>291</width>
+      <height>311</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="General">
+     <attribute name="title">
+      <string>General</string>
+     </attribute>
+     <widget class="QTableView" name="coordinates">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>221</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="locale">
+       <locale language="English" country="UnitedStates"/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="polygon">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>60</y>
+        <width>26</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/images/polygon.png</normaloff>:/images/polygon.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="addRow">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>100</y>
+        <width>26</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>+</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="removeRow">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>140</y>
+        <width>26</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>-</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>182</y>
+        <width>221</width>
+        <height>96</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLabel" name="label_epsr">
+           <property name="text">
+            <string>epsilon r:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_mur">
+           <property name="text">
+            <string>mu r:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_sigma">
+           <property name="text">
+            <string>sigma:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <widget class="QDoubleSpinBox" name="epsr">
+           <property name="locale">
+            <locale language="English" country="UnitedStates"/>
+           </property>
+           <property name="decimals">
+            <number>4</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="mur">
+           <property name="locale">
+            <locale language="English" country="UnitedStates"/>
+           </property>
+           <property name="decimals">
+            <number>4</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="sigma">
+           <property name="locale">
+            <locale language="English" country="UnitedStates"/>
+           </property>
+           <property name="decimals">
+            <number>2</number>
+           </property>
+           <property name="maximum">
+            <double>99999999.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="square">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>20</y>
+        <width>26</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/images/square.png</normaloff>:/images/square.png</iconset>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Subcell">
+     <attribute name="title">
+      <string>Subcell</string>
+     </attribute>
+     <widget class="QCheckBox" name="YuMittra">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>80</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Yu-Mittra</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>340</y>
+      <width>143</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPushButton" name="ok">
+       <property name="text">
+        <string>Ok</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancel">
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
