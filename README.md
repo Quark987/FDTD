@@ -12,9 +12,9 @@ Requirements
 ------------
 
 You need QCustomPlot 1.3.2 or later. The subgridding makes use Eigen 3.2.8 and the sensors need FFTW 3.3.4.
-QCustomPlot can be downloaded from http://www.qcustomplot.com/
-Eigen can be downloaded from http://eigen.tuxfamily.org/
-FFTW can be downloaded from http://www.fftw.org
+- QCustomPlot can be downloaded from http://www.qcustomplot.com/
+- Eigen can be downloaded from http://eigen.tuxfamily.org/
+- FFTW can be downloaded from http://www.fftw.org
 
 
 Quick start
